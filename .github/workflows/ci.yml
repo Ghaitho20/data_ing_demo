@@ -89,7 +89,7 @@ jobs:
       - name: Checkout Terraform Repo
         uses: actions/checkout@v4
         with:
-          repository: Ghaitho20/terraform-test_spark_s3-0a550f63
+          repository: Ghaitho20/terraform-test_spark_s3-eb81b84e
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Configure AWS Credentials
