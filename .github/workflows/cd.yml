@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Terraform Repo
         uses: actions/checkout@v4
         with:
-          repository: Ghaitho20/terraform-spark_s3_glue_demo-9b63f0da
+          repository: Ghaitho20/terraform-spark_s3_glue_demo-2e37ced0
           token: ${{ secrets.GH_TOKEN }}
           path: terraform
 
@@ -71,7 +71,7 @@ jobs:
 
       - name: Upload dependencies to S3
         run: |
-          aws s3 cp dependencies.zip s3://tfstate-spark-s3-glue-demo-2v4iuy3c/dependencies.zip
+          aws s3 cp dependencies.zip s3://tfstate-spark-s3-glue-demo-oyo55d54/dependencies.zip
 
       - name: Debug S3 path
         run: |
@@ -91,7 +91,7 @@ jobs:
       # ─────────────────────────────
       - name: Trigger Glue Jobs
         run: |
-          CONFIG_BUCKET="tfstate-spark-s3-glue-demo-2v4iuy3c"
+          CONFIG_BUCKET="tfstate-spark-s3-glue-demo-oyo55d54"
           CONFIG_PATH="s3://${CONFIG_BUCKET}/config.json"
           DEPS_PATH="s3://${CONFIG_BUCKET}/dependencies.zip"
 
