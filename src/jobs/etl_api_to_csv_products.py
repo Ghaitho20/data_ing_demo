@@ -25,7 +25,7 @@ DummyJSON vs FakeStore — differences handled here:
   - Response is wrapped: { "products": [...], "total": N }  → extract ["products"]
   - rating is a direct float (not nested {"rate": x, "count": y})
   - image field is called "thumbnail"
-  - ?limit=0 returns all products (194 total)yesyes zga
+  - ?limit=0 returns all products (194 total)yesyes zgayes 
 """
 
 import io
